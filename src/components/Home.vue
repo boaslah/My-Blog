@@ -96,4 +96,11 @@ a{
     margin: -2.5% 0% 0% -2%;
 }
 
+@media only screen and (max-width: 600px) {
+    .main-div{
+        display: grid;
+        grid-template-columns: 2% 95% 3%;
+    }
+}
+
 </style>
