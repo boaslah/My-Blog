@@ -1,16 +1,18 @@
 <template>
-
-  <HomeView />
+  <div>
+      <Default />
+  </div>
   
 </template>
 
 <script>
-import HomeView from './views/HomeView'
+import Default from './components/App'
+
 
 export default {
   name: 'App',
   components: {
-    HomeView
+    Default
   }
 }
 </script>
@@ -18,7 +20,19 @@ export default {
 
 <style>
 
-body{
+a{
+  
+  font-family: 'Orbitron', serif;
+}
+a:hover{
+    color: rgb(189, 188, 188);
+}
+
+h1{
+  font-family: 'Rubik Microbe', serif;
+}
+
+body.home{
   background-image: url(./assets/background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;

@@ -1,16 +1,19 @@
 <template>
 
-    <Home />   
+    <HomePage />
      
 </template>
 
 <script>
 
-import Home from '../components/Home'
+import HomePage from '../components/Home'
 export default{
     name: 'HomeView',
     components: {
-        Home
+        HomePage
+    },
+    beforeCreate: function() {
+        document.body.className = 'home';
     }
 }
 </script>

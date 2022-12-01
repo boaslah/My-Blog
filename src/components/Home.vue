@@ -37,12 +37,14 @@
 <script>
 
 export default {
-    name: 'Home'
+    name: 'HomePage'
 }
 </script>
 
 <style scoped>
-
+a:hover{
+    color: rgb(189, 188, 188);
+}
 p{
     font-size: 30px;
 }
@@ -59,10 +61,9 @@ i{
 
 h1{
     color: white;
-    font-family: 'EB Garamond', serif;
 }
 p{
-    font-family: 'Exo 2', serif;
+    font-family: 'Rajdhani', serif;
 
 }
 
@@ -71,9 +72,7 @@ p{
     grid-template-rows: 20% 20% 30% 15% 15%;
 }
 
-a:hover{
-    color: rgb(153, 152, 152);
-}
+
 a{
     text-decoration: none;
     color: white;
@@ -100,6 +99,11 @@ a{
     .main-div{
         display: grid;
         grid-template-columns: 2% 95% 3%;
+    }
+
+    .center-div{
+        display: grid;
+        grid-template-rows: 15% 25% 30% 15% 15%;
     }
 }
 
