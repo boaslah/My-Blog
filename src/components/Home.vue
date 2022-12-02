@@ -53,10 +53,10 @@ i{
     color: gray;
     background-color: white;
     margin: 1%;
-    font-size: 15px;
+    font-size: 11px;
     background-size: 40px;
-    padding: 1.5%;
-    border-radius: 50px;
+    padding: 10px;
+    border-radius: 50px;    
 }
 
 h1{

@@ -21,8 +21,8 @@ export default {
 <style>
 
 a{
-  
-  font-family: 'Orbitron', serif;
+  font-weight: bold;
+  font-family: 'BhuTuka Expanded One', serif;
 }
 a:hover{
     color: rgb(189, 188, 188);

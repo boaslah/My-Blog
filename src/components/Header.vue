@@ -31,11 +31,11 @@ export default {
     display: grid;
     grid-template-columns: 20% 55% 25%;
     column-gap: 3%;
-    border-bottom: 0.1px solid;
+    /* border-bottom: 0.1px solid; */
     padding: 3%;
-    position: fixed;
+    /* position: fixed; */
     overflow: hidden;
-    width: 100%;
+    width: 96.5%;
     margin: -2.5% 0% 0% -2%;
     
 }
