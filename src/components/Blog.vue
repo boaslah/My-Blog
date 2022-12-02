@@ -88,7 +88,10 @@ export default{
     column-gap: 5%;
     width: 60%;
     margin: 3% 0% 0% 20%;
-    box-shadow: 0.2px 0.2px 2px 0.2px gray;
+    /* box-shadow: 0.2px 0.2px 2px 0.2px gray; */
+}
+a{
+    color: black;
 }
 img{
     padding: 6%;

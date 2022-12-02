@@ -45,6 +45,7 @@ h1{
 a{
     text-decoration: none;
     margin: 5%;
+    color: black;
 }
 .middle-head{
     text-align: center;
