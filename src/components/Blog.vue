@@ -20,7 +20,7 @@
                     <i>by  {{post.author}}</i>
                 </div>
                 <div>
-                    <p>{{post.hock}}...</p>
+                    <p>...</p>
                 </div>
                 <div>
                     <i>{{post.date}}.   {{post.duration}}                     </i>
@@ -64,7 +64,6 @@ export default{
 }
 
 .single-post:hover{
-    margin: 3% 0% 0% 20%;
     box-shadow: 2px 2px 5px 2px gray;
     cursor: pointer;
 }
@@ -78,7 +77,7 @@ export default{
 
 .post-details i{
     color: rgb(112, 111, 111);
-    position: absolute;
+    /* position: absolute; */
 }
 .post-img{
 }
@@ -110,6 +109,51 @@ p{
     display: grid;
     width: 100%;
     margin: 0% 0% 0% 0%;
+}
+@media only screen and (max-width: 600px) {
+    .social-icons{
+        display: none;
+    }
+    .single-post{
+        margin: 1% 0% 0% 4%;
+        width: 90%;
+    }
+
+    h2{
+        font-size: 15px;
+        margin-top: 0.5%;
+        font-family: 'Prompt', serif;
+    }
+    .post-details{
+        display: grid;
+        grid-template-rows: 25% 5% 50% 15%;
+        row-gap: 1%;
+        margin: 0% 10% 0% 0%;
+        padding: 5%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .single-post{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4.2%;
+    }
+    .post-details i{
+        color: rgb(112, 111, 111);
+        position: none;
+    }
+    img{
+        padding: 5%;
+        width: 90%;
+    }
+    .post-details{
+        display: grid;
+        grid-template-rows: 25% 5% 50% 15%;
+        /* row-gap: 10%; */
+        margin: 0% 10% 0% 0%;
+        padding: 5%;
+    }
+
 }
 
 </style>
