@@ -58,7 +58,7 @@ a{
         display: grid;
         grid-template-columns: 1% 98% 1%;
         text-align: center;
-        margin: -2.5% 0% 0% -8%;
+        margin: -2.5% 0% 10% -5%;
     }
 }
 

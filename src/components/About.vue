@@ -15,7 +15,7 @@
                 <p>for now, this is all i have for my 'about' page. i seriously don't know what should be or shouldn't be on 
                 this page yet, i mean, the details. but you can check back later, maybe i would have figured it out by then.</p>
 
-                <p>thanks for stoping by. xoxo
+                <p>thanks for stopping by. xoxo
                 {{love}}
             </p>
         </div>
