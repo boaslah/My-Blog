@@ -107,4 +107,21 @@ a{
     }
 }
 
+@media only screen and (max-width: 1115px) {
+    .main-div{
+        display: grid;
+        grid-template-columns: 2% 95% 3%;
+    }
+
+    .center-div{
+        display: grid;
+        grid-template-rows: 10% 30% 30% 15% 15%;
+    }
+    .main-div{
+        width: 90%;
+        margin: -2.5% 0% 0% -2%;
+    }
+}
+
+
 </style>
