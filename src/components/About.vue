@@ -62,12 +62,20 @@ img{
         display: flex;
         flex-direction: column;
         padding-bottom: 4.2%;
+        width: 70%;
         margin: 0% 0% 0% 15%;
+    }
+    p{
+        margin-top: 15%;
     }
 }
 @media only screen and (max-width: 600px) {
     p{
         font-size: 20px;
+    }
+    .about{
+        width: 90%;
+        margin: 0% 0% 0% 5%;
     }
 }
 
