@@ -6,7 +6,7 @@
         </div>
         <div>
             <p>
-                well, i'm Blessing Boaslah,  as you might have guessed. i'm a life-long learner and software sngineer at 
+                well, i'm Blessing Boaslah,  as you might have guessed. i'm a life-long learner and software engineer at 
                 <a href="https://kwagei.com">Kwagei Group</a>.</p>
                 <p>i'm from the JavaScript background, and i'm currently learning Vue. </p>
                 <p> i built this long awaited blog with html, css and vue. i'm also doing other projects in vue, let's see how that goes.</p>
