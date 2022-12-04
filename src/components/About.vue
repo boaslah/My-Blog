@@ -6,13 +6,13 @@
         </div>
         <div>
             <p>
-                well, i'm blessing boaslah, as you might have guessed. i'm a life-long learner and software sngineer at 
+                well, i'm Blessing Boaslah,  as you might have guessed. i'm a life-long learner and software sngineer at 
                 <a href="https://kwagei.com">Kwagei Group</a>.</p>
                 <p>i'm from the JavaScript background, and i'm currently learning Vue. </p>
-                <p> i built this my long awaited blog with html, css and vue. i'm also doing other projects in vue, let's see how that goes.</p>
+                <p> i built this long awaited blog with html, css and vue. i'm also doing other projects in vue, let's see how that goes.</p>
 
 
-                <p>for now, this is all i have for my 'about' page. i seriously don't know what should be or shouldn't be on 
+                <p>for now, this is all i have for my 'about' page. i seriously don't know what should or shouldn't be on 
                 this page yet, i mean, the details. but you can check back later, maybe i would have figured it out by then.</p>
 
                 <p>thanks for stopping by. xoxo
@@ -20,30 +20,37 @@
             </p>
         </div>
     </div>
+    <Footer />
     
 </template>
 
 <script>
 
-import data from '../posts.json'
-export default {
-    name: "AboutMe",
-    data(){
-        return{
-            love: data.love
+    import data from '../posts.json'
+    import Footer from './Footer'
+    export default {
+        name: "AboutMe",
+        components:{
+            Footer
+        },
+        data(){
+            return{
+                love: data.love
+            }
         }
     }
-}
 </script>
 
 <style scoped>
 p{
-    font-family: 'Sacramento', serif ;
+    font-family: 'Prompt', serif ;
     font-size: 30px;
     margin-top: -2%;
 
 }
 a{
+    font-family: 'Prompt', serif ;
+    /* font-size: 30px; */
     text-decoration: none;
     color: black;
 }
@@ -56,6 +63,7 @@ a{
 }
 img{
     width: 100%;
+    border-radius: 5px;
 }
 @media only screen and (max-width: 1000px) {
     .about{

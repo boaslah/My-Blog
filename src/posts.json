@@ -1,42 +1,47 @@
 {
     "posts":[
         {
-            "title": "Perfection does exist",
+            "title": "Perfection Does Exist",
             "author": "Blessing Boaslah",
             "date": "December 2, 2022",
             "hock": "What If I told you that you can be prefect. What If I told you that you can be prefect. What If I told you that you can be prefect. What If I told you that you can be prefect.What If I told you that you can be prefect",
             "image": "",
             "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read"
+            "duration": "6 min read",
+            "category": "Java"
         },
         {
-            "title": "Perfection does exist",
+            "title": "Perfection Does Exist",
             "author": "Blessing Boaslah",
             "date": "December 2, 2022",
             "hock": "What If I told you that you can be prefect",
             "image": "",
             "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read"
+            "duration": "6 min read",
+            "category": "Python"
 
         },
         {
-            "title": "Perfection does exist",
+            "title": "Perfection Does Exist",
             "author": "Blessing Boaslah",
             "date": "December 2, 2022",
             "hock": "What If I told you that you can be prefect",
             "image": "",
             "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read"
+            "duration": "6 min read",
+            "category": "Coding"
 
         },
         {
-            "title": "Perfection does exist",
+            "title": "Perfection Does Exist",
             "author": "Blessing Boaslah",
             "date": "December 2, 2022",
             "hock": "What If I told you that you can be prefect",
             "image": "",
             "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read"
+            "duration": "6 min read",
+            "category": "General"
+
 
         }
 

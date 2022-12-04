@@ -23,21 +23,25 @@
                     <p>...</p>
                 </div>
                 <div>
+                    <span class="category">{{post.category}}</span>
                     <i>{{post.date}}.   {{post.duration}}                     </i>
                 </div>
             </div>
         </div>
         
     </div>
+    <Footer />
 </template>
 
 <script>
 
 import data from  './../posts.json'
+import Footer from './Footer'
 
 export default{
     name: "BlogPosts",
     components:{
+        Footer
     },
     data(){
         return{
@@ -48,6 +52,15 @@ export default{
 </script>
 
 <style scoped>
+.category{
+    color: black !important;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50px;
+    padding: 1.5%;
+    margin-right: 5%;
+    font-size: 13px;
+    font-family: 'Roboto', serif;
+}
 .social-icons i{
     color: white;
     background-color: black;
@@ -79,8 +92,7 @@ export default{
     color: rgb(112, 111, 111);
     /* position: absolute; */
 }
-.post-img{
-}
+
 .single-post{
     display: grid;
     grid-template-columns: 25% 75%;
@@ -117,6 +129,9 @@ p{
     .single-post{
         margin: 1% 0% 0% 4%;
         width: 90%;
+    }
+    .category{
+        padding: 2%;
     }
 
     h2{

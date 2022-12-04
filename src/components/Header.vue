@@ -6,9 +6,9 @@
                 <h1>Blessing Boaslah</h1>
             </div>
             <div>
-                <router-link to="/">HOME</router-link> 
-                <router-link to="/blog">BLOG</router-link> 
-                <router-link to="/about">ABOUT</router-link>
+                <router-link to="/" :class="route=== '/'? 'active' : ''">HOME</router-link> 
+                <router-link to="/blog" :class="route=== '/'? 'active' : ''">BLOG</router-link> 
+                <router-link to="/about" :class="route=== '/'? 'active' : ''">ABOUT</router-link>
             </div>
            
         </div>
@@ -19,6 +19,11 @@
 
 <script>
 
+// import { useRoute} from 'vue-router'
+// const route = useRoute().path
+
+// console.log("this is the route",route);
+
 export default {
     name: "Header"
 
@@ -27,13 +32,16 @@ export default {
 
 <style scoped>
 
+
+.active{
+    color: red !important;
+}
+
 .head{
     display: grid;
     grid-template-columns: 20% 55% 25%;
     column-gap: 3%;
-    /* border-bottom: 0.1px solid; */
     padding: 3%;
-    /* position: fixed; */
     overflow: hidden;
     width: 96.5%;
     margin: -2.5% 0% 0% -2%;
@@ -59,6 +67,9 @@ a{
         grid-template-columns: 1% 98% 1%;
         text-align: center;
         margin: -2.5% 0% 10% -5%;
+    }
+    h1{
+        font-size: 45px;
     }
 }
 

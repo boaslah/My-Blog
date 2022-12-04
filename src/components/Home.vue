@@ -100,10 +100,13 @@ a{
         display: grid;
         grid-template-columns: 2% 95% 3%;
     }
+    h1{
+        font-size: 60px;
+    }
 
     .center-div{
         display: grid;
-        grid-template-rows: 15% 25% 30% 15% 15%;
+        grid-template-rows: 25% 15% 30% 15% 15%;
     }
 }
 

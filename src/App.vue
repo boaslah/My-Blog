@@ -2,7 +2,6 @@
   <div>
       <Default />
   </div>
-  
 </template>
 
 <script>
@@ -19,6 +18,8 @@ export default {
 
 
 <style>
+
+
 
 a{
   font-weight: bold;
