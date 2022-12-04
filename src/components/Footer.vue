@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <span>Made with Love from Gbelea, Nimba County, Liberia &hearts;</span>
+        <span>Made with Love from Gbehlay, Nimba County, Liberia &hearts;</span>
     </div>
 </template>
 <script>
@@ -12,12 +12,21 @@ export default {
 
 <style scoped>
 
+    span{
+        font-family: 'Roboto', serif;
+    }
+
     .footer{
         border-top: solid 1px;
         padding: 3%;
         overflow: hidden;
-        width: 96.5%;
-        margin: 5% 0% 0% -2%;
+        /* width: 100%; */
+        margin: 3% -0.4% -2% -2%;
         text-align: center;
+    }
+    @media only screen and (max-width: 600px) {
+        .footer{
+            padding: 7% 3% 7% 3%;
+        }
     }
 </style>

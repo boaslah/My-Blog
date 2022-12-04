@@ -43,13 +43,13 @@
 
 <style scoped>
 p{
-    font-family: 'Prompt', serif ;
+    font-family: 'Rajdhani', serif ;
     font-size: 30px;
     margin-top: -2%;
 
 }
 a{
-    font-family: 'Prompt', serif ;
+    font-family: 'Rajdhani', serif ;
     /* font-size: 30px; */
     text-decoration: none;
     color: black;
