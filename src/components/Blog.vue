@@ -7,8 +7,7 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-
-        <div class="single-post" v-for="post in blogs">
+        <div id="single-post" v-for="post in blogs" @click="reading(post.title, post.post, post.author, post.date, post.duration, post.category)">
             <div class="post-img">
                 <img src="../assets/post-cover.jpg" alt="">
             </div>
@@ -28,8 +27,8 @@
                 </div>
             </div>
         </div>
-        
     </div>
+    
     <Footer />
 </template>
 
@@ -48,6 +47,14 @@ export default{
             blogs: data.posts
         }
     },
+    methods:{
+        reading(title, post, author, date, duration, category){
+            let maindiv = document.getElementById("single-post");
+            maindiv.style.display = "none";
+            console.log(title, maindiv);
+
+        }
+    }
 }
 </script>
 
@@ -76,7 +83,7 @@ export default{
     margin-right:20%;
 }
 
-.single-post:hover{
+#single-post:hover{
     box-shadow: 2px 2px 5px 2px gray;
     cursor: pointer;
 }
@@ -93,7 +100,7 @@ export default{
     /* position: absolute; */
 }
 
-.single-post{
+#single-post{
     display: grid;
     grid-template-columns: 25% 75%;
     column-gap: 5%;
@@ -126,7 +133,7 @@ p{
     .social-icons{
         display: none;
     }
-    .single-post{
+    #single-post{
         margin: 1% 0% 0% 4%;
         width: 90%;
     }
@@ -148,7 +155,7 @@ p{
     }
 }
 @media only screen and (max-width: 1000px) {
-    .single-post{
+    #single-post{
         display: flex;
         flex-direction: column;
         padding-bottom: 4.2%;
