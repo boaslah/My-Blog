@@ -19,7 +19,10 @@ export default {
 
 <style>
 
-
+router-link{
+  font-weight: bold;
+  color: red;
+}
 
 a{
   font-weight: bold;

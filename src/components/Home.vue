@@ -74,7 +74,7 @@ p{
 
 
 a{
-    text-decoration: none;
+    text-decoration: solid;
     color: white;
     margin: 2%;
     font-size: 20px;
