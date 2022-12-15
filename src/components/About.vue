@@ -41,7 +41,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 p{
     font-family: 'Rajdhani', serif ;
     font-size: 30px;

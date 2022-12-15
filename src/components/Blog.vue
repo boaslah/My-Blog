@@ -58,7 +58,7 @@ export default{
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .category{
     color: black !important;
     background-color: rgb(230, 230, 230);
