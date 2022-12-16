@@ -7,24 +7,39 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-        <div id="single-post" v-for="post in blogs" @click="reading(post.title, post.post, post.author, post.date, post.duration, post.category)">
-            <div class="post-img">
-                <img src="../assets/post-cover.jpg" alt="">
+        <div id="blogs" @click="reading()">
+            <div id="single-post" v-for="post in blogs">
+                <div class="post-img">
+                    <img src="../assets/post-cover.jpg" alt="">
+                </div>
+                <div class="post-details">
+                    <div class="post-title">
+                        <h2>{{post.title}}</h2>
+                    </div>
+                    <div>
+                        <i>by  {{post.author}}</i>
+                    </div>
+                    <div>
+                        <p>...</p>
+                    </div>
+                    <div>
+                        <span class="category">{{post.category}}</span>
+                        <i>{{post.date}}.   {{post.duration}}                     </i>
+                    </div>
+                </div>
             </div>
-            <div class="post-details">
-                <div class="post-title">
-                    <h2>{{post.title}}</h2>
-                </div>
-                <div>
-                    <i>by  {{post.author}}</i>
-                </div>
-                <div>
-                    <p>...</p>
-                </div>
-                <div>
-                    <span class="category">{{post.category}}</span>
-                    <i>{{post.date}}.   {{post.duration}}                     </i>
-                </div>
+        </div>
+        <div id="reading-page">
+            <div class="post-title">
+                <h2>{{blogs[0].title}}</h2>
+            </div>
+            <div>
+                <i>by  {{blogs[0].author}}</i>
+                <span class="category">{{blogs[0].category}}</span>
+                <i>{{blogs[0].date}}.   {{blogs[0].duration}}                     </i>
+            </div>
+            <div>
+                <p>{{blogs[0].hock}}</p>
             </div>
         </div>
     </div>
@@ -48,17 +63,18 @@ export default{
         }
     },
     methods:{
-        reading(title, post, author, date, duration, category){
-            let maindiv = document.getElementById("single-post");
-            maindiv.style.display = "none";
-            console.log(title, maindiv);
-
+        reading(){
+            document.getElementById("blogs").style.display = "none";
+            document.getElementById("reading-page").style.display = "block";
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+#reading-page .category{
+    margin: 0% 5% 0% 5%;
+}
 .category{
     color: black !important;
     background-color: rgb(230, 230, 230);
@@ -67,6 +83,11 @@ export default{
     margin-right: 5%;
     font-size: 13px;
     font-family: 'Roboto', serif;
+}
+#reading-page{
+    display: none;
+    width: 60%;
+    margin: 3% 0% 0% 20%;
 }
 .social-icons i{
     color: white;
@@ -152,6 +173,10 @@ p{
         row-gap: 1%;
         margin: 0% 10% 0% 0%;
         padding: 5%;
+    }
+    #reading-page{
+        width: 90%;
+        margin: 1% 0% 0% 4%;
     }
 }
 @media only screen and (max-width: 1000px) {
