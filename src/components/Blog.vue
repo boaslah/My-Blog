@@ -234,7 +234,7 @@ p{
     }
     #reading-page{
         width: 90%;
-        margin: 1% 0% 0% 6%;
+        margin: 1% 0% 0% 5%;
     }
     #reading-page h2{
         font-size: 20px;
