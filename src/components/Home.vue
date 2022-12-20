@@ -44,6 +44,7 @@ export default {
 <style lang="scss" scoped>
 a:hover{
     color: rgb(189, 188, 188);
+    font-weight: 900;
 }
 p{
     font-size: 30px;

@@ -54,6 +54,7 @@ a{
     text-decoration: none;
     margin: 5%;
     color: black;
+    font-style: underline;
 }
 .middle-head{
     text-align: center;

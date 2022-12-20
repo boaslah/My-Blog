@@ -21,11 +21,12 @@ export default {
         padding: 3%;
         overflow: hidden;
         /* width: 100%; */
-        margin: 3% -0.4% -2% -2%;
+        margin: 15% -0.4% -2% -2%;
         text-align: center;
     }
     @media only screen and (max-width: 600px) {
         .footer{
+            margin-top: 30%;
             padding: 7% 3% 7% 3%;
         }
     }

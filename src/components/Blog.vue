@@ -30,16 +30,26 @@
             </div>
         </div>
         <div id="reading-page">
+            <img src="../assets/post-cover.jpg" alt="">
             <div class="post-title">
                 <h2>{{blogs[0].title}}</h2>
             </div>
             <div>
-                <i>by  {{blogs[0].author}}</i>
-                <span class="category">{{blogs[0].category}}</span>
-                <i>{{blogs[0].date}}.   {{blogs[0].duration}}                     </i>
+                <i class="author">by  {{blogs[0].author}} </i>         
+                <i> {{blogs[0].duration}} </i>
             </div>
             <div>
                 <p>{{blogs[0].hock}}</p>
+            </div><br>
+            {{blogs[0].date}}   <span class="category">{{blogs[0].category}}   </span>
+            <div><br><br>
+                <h3>Comments</h3>
+                <div v-for="eachComment in comments">
+                    <br><br><i class="fa-solid fa-user"></i><span class="comments">{{eachComment}}</span><br>
+                </div>
+                <!-- <span>{{comment}}</span><br> <br> --><br><br>
+                <input type="text" v-model="comment" id="inputField" placeholder="Write Comment"><br><br>
+                <button @click="comments.push(comment); clearInput()">Add Comment</button>
             </div>
         </div>
     </div>
@@ -59,13 +69,20 @@ export default{
     },
     data(){
         return{
-            blogs: data.posts
+            blogs: data.posts,
+            comment: '',
+            comments: []
         }
     },
     methods:{
         reading(){
             document.getElementById("blogs").style.display = "none";
             document.getElementById("reading-page").style.display = "block";
+        },
+        clearInput(){
+            let input = document.getElementById('inputField');
+            input.value = '';
+            console.log(input);
         }
     }
 }
@@ -74,6 +91,38 @@ export default{
 <style lang="scss" scoped>
 #reading-page .category{
     margin: 0% 5% 0% 5%;
+}
+#reading-page .fa-user{
+    margin: 0.5% 1% 0% 0%;
+    background-color: rgb(140, 140, 146);
+    font-size: 30px;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+}
+input{
+    width: 60%;
+    padding: 2.5%;
+    font-size: 20px;
+}
+button{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color:rgba(98, 110, 114, 0.863) ;
+    padding: 2%;
+    font-weight: solid;
+}
+button:hover{
+    cursor: pointer;
+}
+.comments{
+    background-color: rgb(230, 230, 230);
+    padding: 2%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 200px;
 }
 .category{
     color: black !important;
@@ -99,6 +148,9 @@ export default{
     border-radius: 170px;
     text-align: right;
     float: right;
+}
+.author{
+    margin-right: 2%;
 }
 .social-icons{
     margin-right:20%;
@@ -132,10 +184,16 @@ export default{
 a{
     color: black;
 }
-img{
+#blogs img{
     padding: 6%;
     width: 100%;
 }
+
+#reading-page img {
+    width: 100%;
+    padding-bottom: 5%;
+}
+
 h2{
     font-size: 30px;
     margin-top: 0.5%;
@@ -176,7 +234,10 @@ p{
     }
     #reading-page{
         width: 90%;
-        margin: 1% 0% 0% 4%;
+        margin: 1% 0% 0% 6%;
+    }
+    #reading-page h2{
+        font-size: 20px;
     }
 }
 @media only screen and (max-width: 1000px) {
@@ -189,9 +250,12 @@ p{
         color: rgb(112, 111, 111);
         position: none;
     }
-    img{
+    #blogs img{
         padding: 5%;
         width: 90%;
+    }
+    #reading-page img{
+        width: 100%;
     }
     .post-details{
         display: grid;
