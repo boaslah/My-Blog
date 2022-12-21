@@ -41,14 +41,15 @@
             <div>
                 <p>{{blogs[0].hock}}</p>
             </div><br>
-            {{blogs[0].date}}   <span class="category">{{blogs[0].category}}   </span>
+            {{blogs[0].date}}   
+            <!-- <span class="category">{{blogs[0].category}}   </span> -->
             <div><br><br>
                 <h3>Comments</h3>
                 <div v-for="eachComment in comments" class="all-comments">
                     <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p><br>
                 </div>
                 <!-- <span class="comments">{{comment}}</span><br>--> <br><br><br> 
-                <input type="text"  v-model="comment" id="inputField" placeholder="Write Comment"><br><br>
+                <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
                 <button @click="comments.push(comment); clearInput()">Add Comment</button>
             </div>
         </div>
@@ -80,9 +81,7 @@ export default{
             document.getElementById("reading-page").style.display = "block";
         },
         clearInput(){
-            let input = document.getElementById('inputField');
-            input.value = '';
-            console.log(input);
+            this.comment = "";
         }
     }
 }
@@ -93,7 +92,7 @@ export default{
     margin: 0% 5% 0% 5%;
 }
 #reading-page .fa-user{
-    margin: 0.5% 1% 0% 0%;
+    margin: 1% 1% 0% 0%;
     // background-color: rgb(140, 140, 146);
     font-size: 30px;
     padding: 5px;
@@ -215,6 +214,9 @@ p{
     margin: 0% 0% 0% 0%;
 }
 @media only screen and (max-width: 600px) {
+    #reading-page .fa-user{
+        margin: 10% 1% 0% 0%;
+    }
     #reading-page .fa-user{
         margin: 0% 1% 0% 0%;
         font-size: 20px;
