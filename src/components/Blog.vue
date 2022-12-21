@@ -44,11 +44,11 @@
             {{blogs[0].date}}   <span class="category">{{blogs[0].category}}   </span>
             <div><br><br>
                 <h3>Comments</h3>
-                <div v-for="eachComment in comments">
-                    <br><br><i class="fa-solid fa-user"></i><span class="comments">{{eachComment}}</span><br>
+                <div v-for="eachComment in comments" class="all-comments">
+                    <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p><br>
                 </div>
-                <!-- <span>{{comment}}</span><br> <br> --><br><br>
-                <input type="text" v-model="comment" id="inputField" placeholder="Write Comment"><br><br>
+                <!-- <span class="comments">{{comment}}</span><br>--> <br><br><br> 
+                <input type="text"  v-model="comment" id="inputField" placeholder="Write Comment"><br><br>
                 <button @click="comments.push(comment); clearInput()">Add Comment</button>
             </div>
         </div>
@@ -94,10 +94,10 @@ export default{
 }
 #reading-page .fa-user{
     margin: 0.5% 1% 0% 0%;
-    background-color: rgb(140, 140, 146);
+    // background-color: rgb(140, 140, 146);
     font-size: 30px;
     padding: 5px;
-    color: white;
+    color: orange;
     border-radius: 5px;
 }
 input{
@@ -123,6 +123,12 @@ button:hover{
     border-top-right-radius: 200px;
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 200px;
+    padding-left: 2%;
+    display: inline-block;
+}
+.all-comments{
+    display: flex;
+    flex-direction: row;
 }
 .category{
     color: black !important;
@@ -209,6 +215,11 @@ p{
     margin: 0% 0% 0% 0%;
 }
 @media only screen and (max-width: 600px) {
+    #reading-page .fa-user{
+        margin: 0% 1% 0% 0%;
+        font-size: 20px;
+    }
+
     .social-icons{
         display: none;
     }
