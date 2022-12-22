@@ -38,7 +38,7 @@
             </div>
 
             <div>
-                <i class="author">by  {{blogs[0].author}},    Published on</i>         
+                <i class="author">by  <b>{{blogs[0].author}}</b>,    Published on</i>         
                 <i>{{blogs[index].date}}</i>
                 <i class="duration">{{blogs[index].duration}}</i>
             </div><br><br>
@@ -122,7 +122,7 @@ export default{
     margin: 0% 5% 0% 0%;
 }
 #reading-page .fa-user{
-    margin: 0% 1% 0% 0%;
+    margin: 1% 1% 0% 0%;
     // background-color: rgb(140, 140, 146);
     font-size: 30px;
     padding: 5px;
