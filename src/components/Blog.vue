@@ -214,6 +214,8 @@ button:hover{
     column-gap: 5%;
     width: 60%;
     margin: 3% 0% 0% 20%;
+    padding: 2% 0% 2% 0%;
+    border-bottom: 0.1px solid rgb(207, 207, 207);
     /* box-shadow: 0.2px 0.2px 2px 0.2px gray; */
 }
 a{
