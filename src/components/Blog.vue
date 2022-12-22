@@ -10,7 +10,7 @@
         <div id="blogs">
             <div id="single-post" v-for="post in blogs">
                 <div class="post-img" @click="reading(post.index)">
-                    <img src="../assets/perfection-post-cover.jpg" alt="">
+                    <img v-bind:src="`${post.image}`" alt="">
                 </div>
                 <div class="post-details" @click="reading(post.index)">
                     <div class="post-title">
@@ -31,7 +31,7 @@
         </div>
         <div id="reading-page">
 
-            <img src="../assets/perfection-post-cover.jpg" alt="">
+            <img :src="blogs[index].image" alt="">
 
             <div class="post-title">
                 <h2>{{blogs[index].title}}</h2>

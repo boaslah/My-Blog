@@ -37,7 +37,7 @@ h1{
 }
 
 body.home{
-  background-image: url(./assets/background-image.jpg);
+  background-image: url(../public/assets/background-image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

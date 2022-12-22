@@ -2,7 +2,7 @@
 
     <div class="about">
         <div>
-            <img src="../assets/me.jpeg" alt="">
+            <img src="../../public/assets/me.jpeg" alt="">
         </div>
         <div>
             <p>
