@@ -248,7 +248,7 @@ p{
         margin: 0% 1% 0% 0%;
     }
     #reading-page .fa-user{
-        margin: 0% 1% 0% 0%;
+        margin: 5% 1% 0% 0%;
         font-size: 20px;
     }
 
