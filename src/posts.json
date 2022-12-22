@@ -1,47 +1,28 @@
 {
     "posts":[
         {
-            "title": "Perfection Does Exist",
+            "index": 0,
+            "title": "2022: Yearly Review",
             "author": "Blessing Boaslah",
             "date": "December 2, 2022",
-            "hock": "What If I told you that you can be prefect. What If I told you that you can be prefect.",
+            "hock": "...",
             "image": "",
-            "post": "So, I have heard this many times and I even became a believer",
+            "post": "...",
             "duration": "6 min read",
-            "category": "Java"
+            "category": "Personal",
+            "comments": ["okay", "great work"]
         },
         {
+            "index": 1,
             "title": "Perfection Does Exist",
             "author": "Blessing Boaslah",
-            "date": "December 2, 2022",
-            "hock": "What If I told you that you can be prefect",
-            "image": "",
-            "post": "So, let's change the topic",
-            "duration": "6 min read",
-            "category": "Python"
-        },
-        {
-            "title": "Perfection Does Exist",
-            "author": "Blessing Boaslah",
-            "date": "December 2, 2022",
-            "hock": "What If I told you that you can be prefect",
-            "image": "",
-            "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read",
-            "category": "Coding"
-
-        },
-        {
-            "title": "Perfection Does Exist",
-            "author": "Blessing Boaslah",
-            "date": "December 2, 2022",
-            "hock": "What If I told you that you can be prefect",
-            "image": "",
-            "post": "So, I have heard this many times and I even became a believer",
-            "duration": "6 min read",
-            "category": "CS"
-
-
+            "date": "...",
+            "hock": "...",
+            "image": "./assets/perfection-post-cover.jpg",
+            "post": "Coming soon",
+            "duration": "...",
+            "category": "General",
+            "comments": []
         }
 
     ],

@@ -7,50 +7,59 @@
             <i class="fa-brands fa-twitter"></i>
             <i class="fa-brands fa-facebook-f"></i>
         </div>
-        <div id="blogs" @click="reading()">
+        <div id="blogs">
             <div id="single-post" v-for="post in blogs">
-                <div class="post-img">
-                    <img src="../assets/post-cover.jpg" alt="">
+                <div class="post-img" @click="reading(post.index)">
+                    <img src="../assets/perfection-post-cover.jpg" alt="">
                 </div>
-                <div class="post-details">
+                <div class="post-details" @click="reading(post.index)">
                     <div class="post-title">
                         <h2>{{post.title}}</h2>
                     </div>
                     <div>
-                        <i>by  {{post.author}}</i>
+                        <!-- <i>{{post.duration}}</i> -->
                     </div>
                     <div>
-                        <p>...</p>
+                        <p>{{post.hock}}</p>
                     </div>
                     <div>
                         <span class="category">{{post.category}}</span>
-                        <i>{{post.date}}.   {{post.duration}}                     </i>
+                        <i>{{post.date}}</i>
                     </div>
                 </div>
             </div>
         </div>
         <div id="reading-page">
-            <img src="../assets/post-cover.jpg" alt="">
+
+            <img src="../assets/perfection-post-cover.jpg" alt="">
+
             <div class="post-title">
-                <h2>{{blogs[0].title}}</h2>
+                <h2>{{blogs[index].title}}</h2>
             </div>
+
             <div>
-                <i class="author">by  {{blogs[0].author}} </i>         
-                <i> {{blogs[0].duration}} </i>
+                <!-- <i class="author">by  {{blogs[0].author}} .</i>          -->
+                <i>{{blogs[index].date}}</i>
+                <i class="duration">{{blogs[index].duration}}</i>
             </div>
+
             <div>
-                <p>{{blogs[0].hock}}</p>
-            </div><br>
-            {{blogs[0].date}}   
-            <!-- <span class="category">{{blogs[0].category}}   </span> -->
+                <p>{{blogs[index].post}}</p>
+            </div><br><br>
+
+            <span class="category">{{blogs[index].category}}   </span><br><br><br>
+
+            <button v-if="index > 0" @click="reading(index-1)" class="nav">Prev</button>   <button v-if="index < 1" @click="reading(index+1)" class="next nav">Next</button>
+
             <div><br><br>
                 <h3>Comments</h3>
-                <div v-for="eachComment in comments" class="all-comments">
-                    <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p><br>
-                </div>
-                <!-- <span class="comments">{{comment}}</span><br>--> <br><br><br> 
+
+                <div v-for="eachComment in blogs[index].comments"  class="all-comments">
+                    <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p>
+                </div><br><br><br>
+
                 <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
-                <button @click="comments.push(comment); clearInput()">Add Comment</button>
+                <button @click="comments = blogs[index].comments; comments.push(comment); clearInput()">Add Comment</button>
             </div>
         </div>
     </div>
@@ -72,15 +81,19 @@ export default{
         return{
             blogs: data.posts,
             comment: '',
-            comments: []
+            comments: [],
+            index: 0
         }
     },
     methods:{
-        reading(){
+        reading(index){
             document.getElementById("blogs").style.display = "none";
             document.getElementById("reading-page").style.display = "block";
+            this.index = index;
         },
         clearInput(){
+            // data.dumps(this.comment);
+            console.log(this.comments); 
             this.comment = "";
         }
     }
@@ -88,11 +101,24 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
+.nav{
+    background-color: rgb(214, 214, 214);
+    color: black;
+    padding: 1%;
+}
+
+.next{
+    float: right;
+}
+.duration{
+    margin-left: 5%;
+}
 #reading-page .category{
-    margin: 0% 5% 0% 5%;
+    margin: 0% 5% 0% 0%;
 }
 #reading-page .fa-user{
-    margin: 1% 1% 0% 0%;
+    margin: 0% 1% 0% 0%;
     // background-color: rgb(140, 140, 146);
     font-size: 30px;
     padding: 5px;
@@ -215,7 +241,7 @@ p{
 }
 @media only screen and (max-width: 600px) {
     #reading-page .fa-user{
-        margin: 10% 1% 0% 0%;
+        margin: 0% 1% 0% 0%;
     }
     #reading-page .fa-user{
         margin: 0% 1% 0% 0%;
@@ -230,11 +256,11 @@ p{
         width: 90%;
     }
     .category{
-        padding: 2%;
+        padding: 3%;
     }
 
     h2{
-        font-size: 15px;
+        font-size: 30px;
         margin-top: 0.5%;
         font-family: 'Prompt', serif;
     }

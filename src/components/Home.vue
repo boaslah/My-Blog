@@ -12,8 +12,8 @@
                     starting with what I have now to figure it out. </p>
             </div>
             <div>
-                <router-link to="/">HOME</router-link> 
-                <router-link to="/blog">BLOG</router-link> 
+                <!-- <router-link to="/">HOME</router-link>  -->
+                <router-link to="/blog">MY BLOG</router-link> 
                 <router-link to="/about">ABOUT</router-link>
             </div>
             <div>
@@ -54,10 +54,10 @@ i{
     color: gray;
     background-color: white;
     margin: 1%;
+    padding: 10px;
     font-size: 11px;
     background-size: 40px;
-    padding: 10px;
-    border-radius: 50px;    
+    border-radius: 200px;    
 }
 
 h1{
