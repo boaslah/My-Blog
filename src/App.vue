@@ -26,7 +26,7 @@ router-link{
 
 a{
   font-weight: bold;
-  font-family: 'BhuTuka Expanded One', serif;
+  font-family: 'Electrolize', serif;
 }
 a:hover{
     color: rgb(189, 188, 188);

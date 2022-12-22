@@ -11,16 +11,16 @@
                 <p>On a mission to discover my next great adventure,
                     starting with what I have now to figure it out. </p>
             </div>
-            <div>
+            <div class="links">
                 <!-- <router-link to="/">HOME</router-link>  -->
                 <router-link to="/blog">BLOG</router-link> 
                 <router-link to="/about">ABOUT</router-link>
             </div>
             <div>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-facebook-f"></i>
+                <a href="https://www.instagram.com/bboaslah"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@bboaslah"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://www.twitter.com/bdbth"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/bdbth"><i class="fa-brands fa-facebook"></i></a>
             </div>
            
 
@@ -53,11 +53,11 @@ p{
 i{
     color: gray;
     background-color: white;
-    margin: 1%;
+    margin: 1% !important;
     padding: 10px;
-    font-size: 11px;
+    font-size: 20px;
     background-size: 40px;
-    border-radius: 200px;    
+    border-radius: 500px;    
 }
 
 h1{
@@ -74,7 +74,7 @@ p{
 }
 
 
-a{
+.links a{
     text-decoration: solid;
     color: white;
     margin: 2%;

@@ -2,10 +2,10 @@
 
     <div class="blog-posts">
         <div class="social-icons">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
+            <a href="https://www.instagram.com/bboaslah"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@bboaslah"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.twitter.com/bdbth"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/bdbth"><i class="fa-brands fa-facebook"></i></a>
         </div>
         <div id="blogs">
             <div id="single-post" v-for="post in blogs">
@@ -39,7 +39,7 @@
 
             <div>
                 <i class="author">by  <b>{{blogs[0].author}}</b>,    Published on</i>         
-                <i>{{blogs[index].date}}</i>
+                <i>{{blogs[index].date}}</i><i class="fa fa-solid fa-period"></i>
                 <i class="duration">{{blogs[index].duration}}</i>
             </div><br><br>
 
@@ -72,6 +72,7 @@
 import data from  './../posts.json'
 import Footer from './Footer'
 
+
 export default{
     name: "BlogPosts",
     components:{
@@ -92,8 +93,6 @@ export default{
             this.index = index;
         },
         clearInput(){
-            // data.dumps(this.comment);
-            console.log(this.comments); 
             this.comment = "";
         }
     }
@@ -122,7 +121,7 @@ export default{
     margin: 0% 5% 0% 0%;
 }
 #reading-page .fa-user{
-    margin: 1% 1% 0% 0%;
+    margin: 1.5% 1% 0% 0%;
     // background-color: rgb(140, 140, 146);
     font-size: 30px;
     padding: 5px;
@@ -177,7 +176,7 @@ button:hover{
     color: white;
     background-color: black;
     margin: 0.3%;
-    font-size: 11px;
+    font-size: 18px;
     background-size: 40px;
     padding: 1%;
     border-radius: 170px;
