@@ -38,18 +38,18 @@
             </div>
 
             <div>
-                <!-- <i class="author">by  {{blogs[0].author}} .</i>          -->
+                <i class="author">by  {{blogs[0].author}},    Published on</i>         
                 <i>{{blogs[index].date}}</i>
                 <i class="duration">{{blogs[index].duration}}</i>
-            </div>
+            </div><br><br>
 
             <div>
                 <p>{{blogs[index].post}}</p>
             </div><br><br>
 
-            <span class="category">{{blogs[index].category}}   </span><br><br><br>
+            <!-- <span class="category">{{blogs[index].category}}   </span><br><br><br> -->
 
-            <button v-if="index > 0" @click="reading(index-1)" class="nav">Prev</button>   <button v-if="index < 1" @click="reading(index+1)" class="next nav">Next</button>
+            <i class="fa fa-arrow-left nav" v-if="index > 0" @click="reading(index-1)"></i>   <i class="fa fa-solid fa-arrow-right next nav" v-if="index < 1" @click="reading(index+1)"></i>
 
             <div><br><br>
                 <h3>Comments</h3>
@@ -106,13 +106,17 @@ export default{
     background-color: rgb(214, 214, 214);
     color: black;
     padding: 1%;
+    font-size: 30px;
+}
+.nav:hover{
+    cursor: pointer;
 }
 
 .next{
     float: right;
 }
 .duration{
-    margin-left: 5%;
+    margin-left: 2%;
 }
 #reading-page .category{
     margin: 0% 5% 0% 0%;
@@ -181,7 +185,7 @@ button:hover{
     float: right;
 }
 .author{
-    margin-right: 2%;
+    margin-right: 1%;
 }
 .social-icons{
     margin-right:20%;
@@ -260,7 +264,7 @@ p{
     }
 
     h2{
-        font-size: 30px;
+        font-size: 25px;
         margin-top: 0.5%;
         font-family: 'Prompt', serif;
     }

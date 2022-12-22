@@ -13,7 +13,7 @@
             </div>
             <div>
                 <!-- <router-link to="/">HOME</router-link>  -->
-                <router-link to="/blog">MY BLOG</router-link> 
+                <router-link to="/blog">BLOG</router-link> 
                 <router-link to="/about">ABOUT</router-link>
             </div>
             <div>
