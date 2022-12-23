@@ -89,7 +89,7 @@ export default{
     },
     methods:{
         reading(index){
-            document.getElementById("blogs").style.display = "none";
+            document.getElementById("blogs").style.display = "none";;
             document.getElementById("reading-page").style.display = "block";
             this.index = index;
         },
