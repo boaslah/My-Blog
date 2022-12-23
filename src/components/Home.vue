@@ -105,7 +105,8 @@ p{
         font-size: 50px;
     }
     p{
-        margin-top: -10%;
+        margin-top: -7%;
+        font-size: 27px;
     }
 
     .center-div{
