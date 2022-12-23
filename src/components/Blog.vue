@@ -21,7 +21,7 @@
                     </div>
                     <div>
                         <span class="category">{{post.category}}</span>
-                        <i>{{post.date}}</i>
+                        <span>{{post.date}}</span>
                     </div>
                 </div>
             </div>
@@ -35,9 +35,9 @@
             </div>
 
             <div>
-                <i class="author">by  <b>{{blogs[index].author}}</b>,    Published on</i>         
-                <i>{{blogs[index].date}}</i><i class="fa fa-solid fa-period"></i>
-                <i class="duration">{{blogs[index].duration}}</i>
+                <span class="author">by  <b>{{blogs[index].author}}</b>,    Published on</span>         
+                <span>{{blogs[index].date}}</span>
+                <i class="fa fa-dot"></i><span class="duration">{{blogs[index].duration}}</span>
             </div><br><br>
 
             <div>
@@ -163,8 +163,15 @@ button:hover{
     border-radius: 50px;
     padding: 1.5%;
     margin-right: 5%;
-    font-size: 13px;
+    font-size: 13px !important;
     font-family: 'Roboto', serif;
+}
+span{
+    font-family: 'Roboto', serif;
+    font-size: 14px;
+    color: gray;
+    font-weight: 600;
+
 }
 #reading-page{
     display: none;
