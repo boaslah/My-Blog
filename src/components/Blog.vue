@@ -21,7 +21,7 @@
                     </div>
                     <div>
                         <span class="category">{{post.category}}</span>
-                        <span>{{post.date}}</span><i class="fa fa-circle"></i>
+                        <span>{{post.date}}</span>
                         <span class="duration">{{post.duration}}</span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             <div>
                 <span class="author">by  <strong class="black">{{blogs[index].author}}</strong>,    Published on</span>         
                 <span>{{blogs[index].date}}</span>
-                <i class="fa fa-circle"></i><span class="duration">{{blogs[index].duration}}</span>
+               <span class="duration">{{blogs[index].duration}}</span>
             </div><br><br>
 
             <div>
