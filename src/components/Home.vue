@@ -105,7 +105,7 @@ p{
         font-size: 50px;
     }
     p{
-        margin-top: -5%;
+        margin-top: -10%;
     }
 
     .center-div{
