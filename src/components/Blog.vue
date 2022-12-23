@@ -16,10 +16,7 @@
                     <div class="post-title">
                         <h2>{{post.title}}</h2>
                     </div>
-                    <div>
-                        <!-- <i>{{post.duration}}</i> -->
-                    </div>
-                    <div>
+                    <div class="hock">
                         <p>{{post.hock}}</p>
                     </div>
                     <div>
@@ -38,7 +35,7 @@
             </div>
 
             <div>
-                <i class="author">by  <b>{{blogs[0].author}}</b>,    Published on</i>         
+                <i class="author">by  <b>{{blogs[index].author}}</b>,    Published on</i>         
                 <i>{{blogs[index].date}}</i><i class="fa fa-solid fa-period"></i>
                 <i class="duration">{{blogs[index].duration}}</i>
             </div><br><br>
@@ -49,7 +46,7 @@
 
             <!-- <span class="category">{{blogs[index].category}}   </span><br><br><br> -->
 
-            <i class="fa fa-arrow-left nav" v-if="index > 0" @click="reading(index-1)"></i>   <i class="fa fa-solid fa-arrow-right next nav" v-if="index < 1" @click="reading(index+1)"></i>
+            <i v-if="index > 0" class="fa fa-arrow-left nav"  @click="reading(index-1)"></i>   <i v-if="index+1 != postsLength" class="fa fa-solid fa-arrow-right next nav" @click="reading(index+1)"></i>
 
             <div><br><br>
                 <h3>Comments</h3>
@@ -83,13 +80,15 @@ export default{
             blogs: data.posts,
             comment: '',
             comments: [],
-            index: 0
+            index: 0,
+            postsLength: data.posts.length
         }
     },
     methods:{
         reading(index){
             document.getElementById("blogs").style.display = "none";
             document.getElementById("reading-page").style.display = "block";
+            console.log(index, this.postsLength);
             this.index = index;
         },
         clearInput(){
@@ -146,7 +145,7 @@ button:hover{
 }
 .comments{
     background-color: rgb(230, 230, 230);
-    padding: 2%;
+    padding: 2% 3% 2% 3%;
     border-top-left-radius: 0px;
     border-top-right-radius: 200px;
     border-bottom-left-radius: 200px;
@@ -198,13 +197,12 @@ button:hover{
 
 .post-details{
     display: grid;
-    grid-template-rows: 25% 5% 50% 15%;
+    grid-template-rows: 25% 50% 25%;
     margin: 0% 10% 0% 0%;
 }
 
 .post-details i{
     color: rgb(112, 111, 111);
-    /* position: absolute; */
 }
 
 #single-post{
@@ -253,6 +251,10 @@ p{
         font-size: 20px;
     }
 
+    .hock{
+        height: 15vh;
+    }
+
     .social-icons{
         display: none;
     }
@@ -266,13 +268,13 @@ p{
 
     h2{
         font-size: 25px;
-        margin-top: 0.5%;
+        margin-top: -6%;
         font-family: 'Prompt', serif;
     }
     .post-details{
         display: grid;
-        grid-template-rows: 25% 5% 50% 15%;
-        row-gap: 1%;
+        grid-template-rows: 5% 65% 30%;
+        // row-gap: 5%;
         margin: 0% 10% 0% 0%;
         padding: 5%;
     }
@@ -303,8 +305,7 @@ p{
     }
     .post-details{
         display: grid;
-        grid-template-rows: 25% 5% 50% 15%;
-        /* row-gap: 10%; */
+        grid-template-rows: 25% 65% 10%;
         margin: 0% 10% 0% 0%;
         padding: 5%;
     }

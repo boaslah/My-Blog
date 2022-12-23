@@ -6,17 +6,20 @@
         </div>
         <div>
             <p>
-                well, i'm Blessing Boaslah,  as you might have guessed. i'm a life-long learner and Software Engineer at 
+                Hi, welcome to my corner, I'm Blessing Boaslah. I'm a christian, a life learner and Software Engineer working at 
                 <a href="https://kwagei.com">Kwagei Group</a>.</p>
-                <p>i'm from the JavaScript background, and i'm currently learning Vue. </p>
-                <p> i'm building this long awaited blog with html, css and vue. i'm also doing other projects in vue, let's see how that goes.</p>
+                <p>I currently live in Liberia, where I've spent all my years so far.</p>
+                <p>As a Software Engineer, I'm from the JavaScript background, and I'm currently learning Vue.js. </p>
+                <p>I built this blog with HTML, CSS and Vue.js.  Moreover, I'm doing other personal projects in vue, let's see how that goes.</p>
 
+                <p>I started making tech videos for YouTube early this year, because I found out that no one does that in Liberia, at least for now. I upload videos like once or twice every month
+                 because of how busy I can be. Obviously, I'm learning to improve on that.</p>
 
-                <p>for now, this is all i have for my 'about' page. i seriously don't know what should or shouldn't be on 
-                this page yet, i mean, the details. but you can check back later, maybe i would have figured it out by then.</p>
+                <p>This blog is the result of my constant habit of journaling. Over the years, I've grown to love writing down my thoughts and experiences.</p>
+                <p>Hence, I've decided to explore the public writing space, and of course, I'm open to corrections and feedback. I'd happily embrace them.</p>
 
-                <p>thanks for stopping by. xoxo
-                {{love}}
+                <p>Thanks for stopping by. xoxo</p>
+                <p>- Blessing &hearts;
             </p>
         </div>
     </div>
@@ -44,7 +47,7 @@
 <style lang="scss" scoped>
 p{
     font-family: 'Rajdhani', serif ;
-    font-size: 30px;
+    font-size: 22px;
     margin-top: -2%;
 
 }

@@ -5,11 +5,11 @@
         <div class="center-div">
             <div></div>
             <div>
-                <h1>Blessing Boaslah</h1>
+                <h1>Blessing's Journal</h1>
             </div>
             <div>
-                <p>On a mission to discover my next great adventure,
-                    starting with what I have now to figure it out. </p>
+                <p>On a mission to discover great adventures, 
+                    starting now as I look forward to accomplishing this with God's help. </p>
             </div>
             <div class="links">
                 <!-- <router-link to="/">HOME</router-link>  -->

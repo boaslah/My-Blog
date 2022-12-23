@@ -3,7 +3,7 @@
         <div></div>
         <div class="middle-head">
             <div>
-                <h1>Blessing Boaslah</h1>
+                <h1>Blessing's Journal</h1>
             </div>
             <div>
                 <router-link to="/" :class="route=== '/'? 'active' : ''">HOME</router-link> 
