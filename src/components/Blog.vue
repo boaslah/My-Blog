@@ -52,12 +52,12 @@
             <div><br><br>
                 <h3>Comments</h3>
 
-                <div v-for="eachComment in blogs[index].comments"  class="all-comments">
+                <div v-for="eachComment in localComment.posts[index].comments"  class="all-comments">
                     <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p>
                 </div><br><br><br>
 
                 <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
-                <button @click="comments = blogs[index].comments; comments.push(comment); clearInput()">Add Comment</button>
+                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput()">Add Comment</button>
             </div>
         </div>
     </div>
@@ -69,6 +69,7 @@
 
 import data from  './../posts.json'
 import Footer from './Footer'
+const localComments = window.localStorage.getItem("comments");
 
 
 export default{
@@ -82,17 +83,19 @@ export default{
             comment: '',
             comments: [],
             index: 0,
-            postsLength: data.posts.length
+            postsLength: data.posts.length,
+            localComment: JSON.parse(localComments)
         }
     },
     methods:{
         reading(index){
             document.getElementById("blogs").style.display = "none";
             document.getElementById("reading-page").style.display = "block";
-            console.log(index, this.postsLength);
             this.index = index;
         },
         clearInput(){
+            data.posts[this.index].comments = this.comments;
+            window.localStorage.setItem('comments', JSON.stringify(data));
             this.comment = "";
         }
     }
