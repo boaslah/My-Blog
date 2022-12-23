@@ -21,7 +21,7 @@
                     </div>
                     <div>
                         <span class="category">{{post.category}}</span>
-                        <span>{{post.date}}</span>
+                        <span>{{post.date}}</span><i class="fa fa-circle"></i>
                         <span class="duration">{{post.duration}}</span>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
             <div>
                 <span class="author">by  <strong class="black">{{blogs[index].author}}</strong>,    Published on</span>         
                 <span>{{blogs[index].date}}</span>
-                <i class="fa fa-dot"></i><span class="duration">{{blogs[index].duration}}</span>
+                <i class="fa fa-circle"></i><span class="duration">{{blogs[index].duration}}</span>
             </div><br><br>
 
             <div>
@@ -100,6 +100,12 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
+.fa-circle{
+    font-size: 0.1% !important;
+    color: gray;
+    margin: 1% -1% 0% 1%;
+}
 
 .nav{
     background-color: rgb(214, 214, 214);
