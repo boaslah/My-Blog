@@ -84,7 +84,7 @@ export default{
             comments: [],
             index: 0,
             postsLength: data.posts.length,
-            localComment: JSON.parse(localComments)
+            localComment: JSON.parse(localComments),
         }
     },
     methods:{
@@ -98,8 +98,12 @@ export default{
             window.localStorage.setItem('comments', JSON.stringify(data));
             this.comment = "";
         }
+    },
+    beforeCreate: function() {
+        window.localStorage.setItem('comments', JSON.stringify(data));
     }
 }
+
 </script>
 
 <style lang="scss" scoped>
