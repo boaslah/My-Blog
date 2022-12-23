@@ -22,6 +22,7 @@
                     <div>
                         <span class="category">{{post.category}}</span>
                         <span>{{post.date}}</span>
+                        <span class="duration">{{post.duration}}</span>
                     </div>
                 </div>
             </div>
@@ -35,7 +36,7 @@
             </div>
 
             <div>
-                <span class="author">by  <b>{{blogs[index].author}}</b>,    Published on</span>         
+                <span class="author">by  <strong class="black">{{blogs[index].author}}</strong>,    Published on</span>         
                 <span>{{blogs[index].date}}</span>
                 <i class="fa fa-dot"></i><span class="duration">{{blogs[index].duration}}</span>
             </div><br><br>
@@ -191,6 +192,13 @@ span{
 }
 .author{
     margin-right: 1%;
+}
+.black{
+    color:black !important;
+
+}
+.hock{
+    color: rgb(80, 79, 79);
 }
 .social-icons{
     margin-right:20%;
