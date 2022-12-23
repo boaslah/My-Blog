@@ -102,7 +102,10 @@ p{
         grid-template-columns: 2% 95% 3%;
     }
     h1{
-        font-size: 60px;
+        font-size: 50px;
+    }
+    p{
+        margin-top: -5%;
     }
 
     .center-div{
@@ -118,7 +121,7 @@ p{
     }
 
     h1{
-        font-size: 45px;
+        font-size: 50px;
     }
 
     .center-div{
