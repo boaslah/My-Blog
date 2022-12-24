@@ -51,13 +51,14 @@
 
             <div><br><br>
                 <h3>Comments</h3>
-
-                <div v-for="eachComment in localComment.posts[index].comments"  class="all-comments">
+                <Disqus shortname='my-blog-qlzlm6k3ms' />
+                
+                <!-- <div v-for="eachComment in blogs[index].comments"  class="all-comments">
                     <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p>
-                </div><br><br><br>
+                </div><br><br><br> -->
 
-                <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
-                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput(comment)">Add Comment</button>
+                <!-- <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
+                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput()">Add Comment</button> -->
             </div>
         </div>
     </div>
@@ -69,14 +70,14 @@
 
 import data from  './../posts.json'
 import Footer from './Footer'
-import {insertRow, selectRows} from './../db.js'
-const localComments = window.localStorage.getItem("comments");
+import { Disqus } from 'vue-disqus'
 
 
 export default{
     name: "BlogPosts",
     components:{
-        Footer
+        Footer,
+        Disqus
     },
     data(){
         return{
@@ -85,7 +86,6 @@ export default{
             comments: [],
             index: 0,
             postsLength: data.posts.length,
-            localComment: JSON.parse(localComments),
         }
     },
     methods:{
@@ -94,16 +94,9 @@ export default{
             document.getElementById("reading-page").style.display = "block";
             this.index = index;
         },
-        clearInput(comment){
-            data.posts[this.index].comments = this.comments;
-            window.localStorage.setItem('comments', JSON.stringify(data));
-            let dbconnect = insertRow(this.index, comment);
-            console.log(dbconnect);
+        clearInput(){
             this.comment = "";
         }
-    },
-    beforeCreate: function() {
-        window.localStorage.setItem('comments', JSON.stringify(data));
     }
 }
 

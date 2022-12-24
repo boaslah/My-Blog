@@ -1,5 +1,6 @@
-const sqlite3 = require("sqlite3").verbose();
+// const sqlite3 = require("sqlite3").verbose();
 const comments = "./comments.db";
+// import sqlite3 from 'sqlite3';
 
 function createDbConnection() {
   const db = new sqlite3.Database(comments, (error) => {
