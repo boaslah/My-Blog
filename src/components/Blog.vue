@@ -16,8 +16,8 @@
                     <div class="post-title">
                         <h2>{{post.title}}</h2>
                     </div>
-                    <div class="hock">
-                        <p>{{post.hock}}</p>
+                    <div class="hook">
+                        <p>{{post.hook}}</p>
                     </div>
                     <div>
                         <span class="category">{{post.category}}</span>
@@ -57,7 +57,7 @@
                 </div><br><br><br>
 
                 <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
-                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput()">Add Comment</button>
+                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput(comment)">Add Comment</button>
             </div>
         </div>
     </div>
@@ -69,6 +69,7 @@
 
 import data from  './../posts.json'
 import Footer from './Footer'
+import {insertRow, selectRows} from './../db.js'
 const localComments = window.localStorage.getItem("comments");
 
 
@@ -93,9 +94,11 @@ export default{
             document.getElementById("reading-page").style.display = "block";
             this.index = index;
         },
-        clearInput(){
+        clearInput(comment){
             data.posts[this.index].comments = this.comments;
             window.localStorage.setItem('comments', JSON.stringify(data));
+            let dbconnect = insertRow(this.index, comment);
+            console.log(dbconnect);
             this.comment = "";
         }
     },
@@ -210,7 +213,7 @@ span{
     color:black !important;
 
 }
-.hock{
+.hook{
     color: rgb(80, 79, 79);
 }
 .social-icons{
@@ -279,7 +282,7 @@ p{
         font-size: 20px;
     }
 
-    .hock{
+    .hook{
         height: 15vh;
     }
 
@@ -319,6 +322,8 @@ p{
         display: flex;
         flex-direction: column;
         padding-bottom: 4.2%;
+        // margin: 1% 0% 0% 4%;
+        // width: 80%;
     }
     .post-details i{
         color: rgb(112, 111, 111);
