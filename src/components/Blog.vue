@@ -50,7 +50,7 @@
             <i v-if="index > 0" class="fa fa-arrow-left nav"  @click="reading(index-1)"></i>   <i v-if="index+1 != postsLength" class="fa fa-solid fa-arrow-right next nav" @click="reading(index+1)"></i>
 
             <div><br><br>
-                <h3>Comments</h3>
+                <!-- <h3>Comments</h3> -->
                 <Disqus shortname='my-blog-qlzlm6k3ms' />
                 
                 <!-- <div v-for="eachComment in blogs[index].comments"  class="all-comments">
@@ -103,6 +103,10 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+
+.reaction-items__container{
+    display: none;
+}
 
 .fa-circle{
     font-size: 0.1% !important;
