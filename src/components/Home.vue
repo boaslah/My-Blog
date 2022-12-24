@@ -19,8 +19,8 @@
             <div>
                 <a href="https://www.instagram.com/bboaslah"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.youtube.com/@bboaslah"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://www.twitter.com/bdbth"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.facebook.com/bdbth"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com/bboaslah_"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.facebook.com/bboaslah"><i class="fa-brands fa-facebook"></i></a>
             </div>
            
 
