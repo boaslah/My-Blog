@@ -275,7 +275,7 @@ a{
 h2{
     font-size: 30px;
     margin-top: 0.5%;
-    font-family: 'Prompt', serif;
+    font-family: 'Oswald', serif;
 }
 p{
   
