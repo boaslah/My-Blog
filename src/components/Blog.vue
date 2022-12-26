@@ -313,7 +313,7 @@ p{
     h2{
         font-size: 25px;
         margin-top: -6%;
-        font-family: 'Prompt', serif;
+        font-family: 'Oswald', serif;
     }
     .post-details{
         display: grid;
