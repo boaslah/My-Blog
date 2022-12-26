@@ -105,7 +105,7 @@ export default{
           this.comment = "";
         }
     },
-    beforeCreate: async function(){
+    mounted: async function(){
         this.blogs = await helper.getPosts();
     } 
 }
@@ -113,6 +113,9 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+h3{
+    font-family: 'Paytone One', serif;
+}
 
 .reaction-items__container{
     display: none;
@@ -171,9 +174,9 @@ button:hover{
     background-color: rgb(230, 230, 230);
     padding: 2% 3% 2% 3%;
     border-top-left-radius: 0px;
-    border-top-right-radius: 200px;
-    border-bottom-left-radius: 200px;
-    border-bottom-right-radius: 200px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     padding-left: 2%;
     display: inline-block;
 }
@@ -322,6 +325,10 @@ p{
     }
     #reading-page h2{
         font-size: 20px;
+    }
+    .comments{
+        padding-left: 5%;
+        padding-right: 4%;
     }
 }
 @media only screen and (max-width: 1000px) {
