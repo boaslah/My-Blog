@@ -9,7 +9,7 @@
             </div>
             <div>
                 <p>On a mission to discover great adventures, 
-                    starting now as I look forward to accomplishing this with God's help. </p>
+                    starting with what I have now.</p>
             </div>
             <div class="links">
                 <!-- <router-link to="/">HOME</router-link>  -->
