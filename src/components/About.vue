@@ -9,7 +9,7 @@
                 Hi, welcome to my corner, I'm Blessing Boaslah. I'm a christian, a life learner and Software Engineer working at 
                 <a href="https://kwagei.com">Kwagei Group</a>.</p>
                 <p>I currently live in Liberia, where I've spent all my years so far.</p>
-                <p>As a Software Engineer, I'm from the JavaScript background, and I'm currently learning Vue.js. </p>
+                <p>As a Software Engineer, I'm from the JavaScript background, and I'm currently learning Vue.js amongst others. </p>
                 <p>I built this blog with HTML, CSS and Vue.js.  Moreover, I'm doing other personal projects in vue, let's see how that goes.</p>
 
                 <p>I started making tech videos for YouTube early this year, because I found out that no one does that in Liberia, at least for now. I upload videos like once or twice every month

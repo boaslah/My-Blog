@@ -5,9 +5,9 @@
             <a href="https://www.instagram.com/bboaslah"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.youtube.com/@bboaslah"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.twitter.com/bboaslah_"><i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.facebook.com/bboasl"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.facebook.com/bboaslah"><i class="fa-brands fa-facebook"></i></a>
         </div>
-        <div id="blogs">
+        <div id="blogs" v-if="readingView === ''">
             <div id="single-post" v-for="post in blogs">
                 <div class="post-img" @click="reading(post.index)">
                     <img v-bind:src="`${post.image}`" alt="">
@@ -50,15 +50,18 @@
             <i v-if="index > 0" class="fa fa-arrow-left nav"  @click="reading(index-1)"></i>   <i v-if="index+1 != postsLength" class="fa fa-solid fa-arrow-right next nav" @click="reading(index+1)"></i>
 
             <div><br><br>
-                <!-- <h3>Comments</h3> -->
-                <Disqus shortname='my-blog-qlzlm6k3ms' />
+                <h3>Comments</h3>
                 
-                <!-- <div v-for="eachComment in blogs[index].comments"  class="all-comments">
+                <div v-for="eachComment in comments"  class="all-comments">
                     <br><br><i class="fa-solid fa-user"></i><p class="comments">{{eachComment}}</p>
-                </div><br><br><br> -->
+                </div><br><br><br>
 
-                <!-- <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
-                <button @click="comments = localComment.posts[index].comments; comments.push(comment); clearInput()">Add Comment</button> -->
+                <form @submit.prevent="onSubmit">
+
+                    <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
+                    <button>Add Comment</button>
+
+                </form>
             </div>
         </div>
     </div>
@@ -70,14 +73,14 @@
 
 import data from  './../posts.json'
 import Footer from './Footer'
-import { Disqus } from 'vue-disqus'
+import axios from "axios";
+import helper from './../helper.js';
 
 
 export default{
     name: "BlogPosts",
     components:{
         Footer,
-        Disqus
     },
     data(){
         return{
@@ -86,6 +89,7 @@ export default{
             comments: [],
             index: 0,
             postsLength: data.posts.length,
+            readingView: ''
         }
     },
     methods:{
@@ -93,11 +97,17 @@ export default{
             document.getElementById("blogs").style.display = "none";;
             document.getElementById("reading-page").style.display = "block";
             this.index = index;
+            this.comments = this.blogs[this.index].comments;
         },
-        clearInput(){
-            this.comment = "";
+        async onSubmit() {
+          axios.post(`https://studyclass.glitch.me?comment=${this.comment}&index=${this.index}`);
+          this.comments.push(this.comment);
+          this.comment = "";
         }
-    }
+    },
+    beforeCreate: async function(){
+        this.blogs = await helper.getPosts();
+    } 
 }
 
 </script>
