@@ -322,6 +322,9 @@ p{
         margin: 0% 10% 0% 0%;
         padding: 5%;
     }
+    .hook{
+        margin-bottom: 15%;
+    }
     #reading-page{
         width: 90%;
         margin: 1% 0% 0% 5%;
