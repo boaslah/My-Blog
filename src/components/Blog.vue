@@ -327,7 +327,7 @@ p{
         font-size: 20px;
     }
     .comments{
-        padding-left: 5%;
+        padding-left: 4%;
         padding-right: 4%;
     }
 }
