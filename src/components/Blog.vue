@@ -22,7 +22,7 @@
                     <div>
                         <span class="category">{{post.category}}</span>
                         <span>{{post.date}}</span>
-                        <span class="duration">{{post.duration}}</span>
+                        <!-- <span class="duration">{{post.duration}}</span> -->
                     </div>
                 </div>
             </div>
