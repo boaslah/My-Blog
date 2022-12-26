@@ -42,7 +42,7 @@
             </div><br><br>
 
             <div>
-                <p>{{blogs[index].post}}</p>
+                <p class="post">{{blogs[index].post}}</p>
             </div><br><br>
 
             <!-- <span class="category">{{blogs[index].category}}   </span><br><br><br> -->
@@ -113,6 +113,9 @@ export default{
 </script>
 
 <style lang="scss" scoped>
+.post{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
 h3{
     font-family: 'Paytone One', serif;
 }
