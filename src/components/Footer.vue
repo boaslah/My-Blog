@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-        <span>Made with Love from Gbehlay, Nimba County, Liberia &hearts;</span>
+        <span>Made with <span class="heart">&hearts;</span> from Gbehlay, Nimba County, Liberia</span>
     </div>
 </template>
 <script>
@@ -11,6 +11,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+    .heart{
+        color: red;
+        font-size: 23px;
+    }
 
     span{
         font-family: 'Roboto', serif;
