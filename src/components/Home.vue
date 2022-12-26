@@ -105,7 +105,7 @@ p{
         font-size: 50px;
     }
     p{
-        margin-top: -7%;
+        margin-top: -1%;
         font-size: 27px;
     }
 
