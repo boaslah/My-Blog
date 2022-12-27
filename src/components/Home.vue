@@ -62,6 +62,7 @@ i{
 
 h1{
     color: white;
+    font-size: 65px;
 }
 p{
     font-family: 'Rajdhani', serif;
