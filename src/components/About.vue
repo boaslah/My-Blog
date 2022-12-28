@@ -6,14 +6,14 @@
         </div>
         <div>
             <p>
-                Hi, welcome to my corner. I'm Blessing Boaslah, a Christian, a life learner, and a Liberian Software Engineer working at 
+                Hi, welcome to my corner. I'm Blessing D. Boaslah, a Christian, a life learner, and a Liberian Software Engineer working at 
                 <a href="https://kwagei.com">Kwagei Group</a>.</p>
                 <p>I currently live in Liberia, this sweet land of liberty, where I've spent all my years so far.</p>
                 
                 <p> As a Software Engineer, I'm from 'the JavaScript' background, and I'm currently learning Vue.js amongst others.
                     I built this blog with HTML, CSS, Vue.js and a bit of Node.js. Moreover, I'm doing other personal projects in Vue.js.</p>
 
-                <p>I started making tech videos for YouTube late 2021, because I found out no one does that in Liberia, at least for now. 
+                <p>I started making tech videos for YouTube late 2021, because I found out no one else does that in Liberia, at least for now. 
                     It's also my goal to share my journey and knowledge with young Liberians who want to become Software Engineers. </p>
 
                 <p>This blog results from my constant habit of journaling. Over the years, I've grown to love writing my thoughts and experiences.   

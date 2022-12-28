@@ -42,7 +42,7 @@
             </div><br><br>
 
             <div>
-                <p class="post">{{blogs[index].post}}</p>
+                <p class="post" v-html="blogs[index].post"></p>
             </div><br><br>
 
             <!-- <span class="category">{{blogs[index].category}}   </span><br><br><br> -->
@@ -114,7 +114,10 @@ export default{
 
 <style lang="scss" scoped>
 .post{
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+    // font-family: Helvetica,Arial,sans-serif;
+    margin-top: -1%;
+    font-size: 20px;
+    font-family: 'Rajdhani', serif ;
 }
 h3{
     font-family: 'Paytone One', serif;
@@ -295,10 +298,6 @@ p{
         font-size: 20px;
     }
 
-    .hook{
-        height: 15vh;
-    }
-
     .social-icons{
         display: none;
     }
@@ -312,7 +311,7 @@ p{
 
     h2{
         font-size: 25px;
-        margin-top: -6%;
+        // margin-top: -6%;
         font-family: 'Oswald', serif;
     }
     .post-details{
@@ -321,9 +320,11 @@ p{
         // row-gap: 5%;
         margin: 0% 10% 0% 0%;
         padding: 5%;
+        // position: relative;
     }
     .hook{
         margin-bottom: 15%;
+        height: 15vh;
     }
     #reading-page{
         width: 90%;
