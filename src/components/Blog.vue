@@ -58,7 +58,7 @@
 
                 <form @submit.prevent="onSubmit">
 
-                    <input type="text"  v-model="comment"  placeholder="Write Comment"><br><br>
+                    <input type="text"  v-model="comment"  placeholder="Write Comment" required><br><br>
                     <button>Add Comment</button>
 
                 </form>
